@@ -1,13 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { Canvas } from "@react-three/fiber";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* React-three-fiber Canvas contains THREE.js Renderer, Scene and Camera logic
+    within it with default values that make sense */}
+    <Canvas>
+      <App />
+      <gridHelper position-y={-1} />
+    </Canvas>
   </React.StrictMode>
 );
 
