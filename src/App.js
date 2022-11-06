@@ -7,7 +7,7 @@ function App() {
      *  with default values that make sense */
     <Canvas>
       <mesh>
-        <torusKnotGeometry />
+        <torusGeometry />
         <meshNormalMaterial />
       </mesh>
     </Canvas>
